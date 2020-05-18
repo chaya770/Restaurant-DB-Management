@@ -1,0 +1,130 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <!--xmlns:local="clr-namespace:UI_WPF"-->
+
+
+    <System:String x:Key="lablebranchaddress">כתובת הסניף</System:String>
+    <System:String x:Key="lableavailabledGuys">מספר שליחים</System:String>
+    <System:String x:Key="lablebranchname">שם הסניף</System:String>
+    <System:String x:Key="lablebranchnumber">מספר סניף</System:String>
+    <System:String x:Key="lablebranchnumworkwrs">מספר עובדים</System:String>
+    <System:String x:Key="lablebranchphonenumber">מספר טלפון</System:String>
+    <System:String x:Key="lablebranchhechsher">הכשר</System:String>
+    <System:String x:Key="lablebranchmanager">מנהל הסניף</System:String>
+    <System:String x:Key="lablebranccity">עיר הסניף</System:String>
+    <System:String x:Key="buttonAdd">הוסף</System:String>
+    <System:String x:Key="Add">הוסף</System:String>
+    <System:String x:Key="ordernumber">הזמנה מספר</System:String>
+
+
+
+    <System:String x:Key="AddCostumerButton">הוסף לקוח</System:String>
+    <System:String x:Key="updateCostumerMainWindow">עדכן לקוח</System:String>
+    <System:String x:Key="deleteCostumerMainWindow"> מחק לקוח</System:String>
+    <System:String x:Key="allCostumerMainWindow">רשימת לקוחות</System:String>
+    <System:String x:Key="AddBranchMainWindow">הוסף סניף</System:String>
+    <System:String x:Key="updateBranchMainWindow">עדכן סניף</System:String>
+    <System:String x:Key="deleteBranchMainWindow">מחק סניף</System:String>
+    <System:String x:Key="AllBranchMainWindow">רשימת סניפים</System:String>
+    <System:String x:Key="addOrderMainWindow">הוסף הזמנה</System:String>
+    <System:String x:Key="updateOrderMainWindow">עדכן הזמנה</System:String>
+    <System:String x:Key="deleteOrderMainWindow">מחק הזמנה</System:String>
+    <System:String x:Key="allOrdersMainWindow">רשימת הזמנות</System:String>
+    <System:String x:Key="AddDishMainWindow">הוסף מנה</System:String>
+    <System:String x:Key="UpdateDishMainWindow">עדכן מנה</System:String>
+    <System:String x:Key="deleteDishMainWindow">מחק מנה</System:String>
+    <System:String x:Key="allDishMainWindow">רשימת מנות </System:String>
+    <System:String x:Key="AddOrderedDishMainWindow">הוסף מנה מוזמנת</System:String>
+    <System:String x:Key="updateOrderedDishMainWindow">עדכן מנה מוזמנת</System:String>
+    <System:String x:Key="deleteOrderedDishMainWindow">מחק מנה מוזמנת</System:String>
+    <System:String x:Key="AllOrderedDishMainWindow">רשימת מנות מוזמנות</System:String>
+
+    <System:String x:Key="caloriesMainWindow" >קלוריות</System:String>
+    <System:String x:Key="billMainWindow">חשבון</System:String>
+    <System:String x:Key="priceoforderMainWindow">מחיר הזמנה </System:String>
+
+    <System:String x:Key="groupOrderByKindOfDish">הזמנות מוזמנות לפי סוג מנה</System:String>
+    <System:String x:Key="groupByKindOfCity">הזמנות מוזמנות לפיעיר</System:String>
+    <System:String x:Key="groupByDaysOfWeek">הזמנות   לפי יום בשבוע</System:String>
+    <System:String x:Key="groupByHechsher">הזמנות לפי הכשר</System:String>
+    <System:String x:Key="Update">עדכן</System:String>
+    <System:String x:Key="Delete">מחק</System:String>
+
+    <System:String x:Key="CostumerName">שם לקוח</System:String>
+    <System:String x:Key="costumertz">מס' תעודת זהות</System:String>
+    <System:String x:Key="costumerAge">גיל</System:String>
+    <System:String x:Key="costumerAddress">כתובת</System:String>
+    <System:String x:Key="costumerAddressnow">כתובת עכשיות</System:String>
+    <System:String x:Key="costumerMembership">חבר מועדון</System:String>
+    <System:String x:Key="CreditCard">מס' אשראי</System:String>
+    <System:String x:Key="tzToUpdate">ת.ז. לעדכון</System:String>
+    <System:String x:Key="TZofCostumerToRemove">ת.ז. למחיקה</System:String>
+
+
+    <System:String x:Key="DishCalories">קלוריות</System:String>
+    <System:String x:Key="DishName">שם מנה</System:String>
+    <System:String x:Key="DishNumber">מס' מנה</System:String>
+    <System:String x:Key="DishPrice">מחיר</System:String>
+    <System:String x:Key="DishSize">גודל מנה</System:String>
+    <System:String x:Key="Hechsher">הכשר</System:String>
+    <System:String x:Key="DishRate">דרוג מנה</System:String>
+    <System:String x:Key="DishNumberToDelete">מס' מנה למחיקה</System:String>
+    <System:String x:Key="OrderHechsher">הכשר להזמנה</System:String>
+    <System:String x:Key="OrderDate">תאריך</System:String>
+    <System:String x:Key="OrderToUpdate">מס' הזמנה לעדכון</System:String>
+    <System:String x:Key="Ordernumber">מס' הזמנה</System:String>
+    <System:String x:Key="dishAmount">מס' מנות </System:String>
+
+
+    <System:String x:Key="bill">חשבון:</System:String>
+    <System:String x:Key="payment">לתשלום:</System:String>
+    <System:String x:Key="notincludingTip">לא כולל שירות:)</System:String>
+    <System:String x:Key="totalCalories">סך קלוריות להזמנה</System:String>
+    <System:String x:Key="avgCaloriesPerPerson">ממוצע קלוריות לאדם</System:String>
+    <System:String x:Key="tip">טיפ</System:String>
+
+
+    <System:String x:Key="PriceOfOrder">מחיר הזמנה</System:String>
+    <System:String x:Key="OrdersByDayaOfWEEk">הזמנות לפי ימים בשבוע</System:String>
+    <System:String x:Key="OrdrersByDish">הזמנות לפי מנה</System:String>
+    <System:String x:Key="OrdersByCity">הזמנות לפי עיר</System:String>
+    <System:String x:Key="OrdersByHechsher">הזמנות לפי הכשר</System:String>
+    <System:String x:Key="HomePage">דף הבית</System:String>
+    <System:String x:Key="Costumer">לקוחות</System:String>
+    <System:String x:Key="Branch">סניפים</System:String>
+    <System:String x:Key="Order">הזמנות</System:String>
+    <System:String x:Key="Dish">מנות</System:String>
+    <System:String x:Key="OrderedDish">מנות מוזמנות</System:String>
+    <System:String x:Key="others" xml:space="preserve">חשבון</System:String>
+    <System:String x:Key="TotalPrice">מחיר</System:String>
+
+    <System:String x:Key="SELECTBYordernumber">סנן לפי מס' הזמנה</System:String>
+    <System:String x:Key="SELECTBYbranchnumber">סנן לפי מס' סניף</System:String>
+    <System:String x:Key="SELECTBYorderhechsher">סנן לפי הכשר</System:String>
+    <System:String x:Key="SELECTbyorderdate">סנן לפי תאריך</System:String>
+    <System:String x:Key="select">בחר</System:String>
+    <System:String x:Key="enterAmountOfDish">סנן לפי כמות  </System:String>
+    <System:String x:Key="enterBranchnumber">הכנס מס' סניף</System:String>
+    <System:String x:Key="enterBranchname">הכנס שם סניף</System:String>
+    <System:String x:Key="selctCosname">הכנס שם</System:String>
+    <System:String x:Key="selsectcosTZ">הכנס תעודת זהות</System:String>
+    <System:String x:Key="maxPrice">מקסימום מחיר</System:String>
+    <System:String x:Key="enterMaxprice">מינימום מחיר</System:String>
+    <System:String x:Key="EntemaxCaloroies">הכנס מקימום קלוריות</System:String>
+    <System:String x:Key="MInRAte">הכנס דירוג מינימלי</System:String>
+
+    <System:String x:Key="groups">קבוצות</System:String>
+
+
+
+
+
+
+
+
+</ResourceDictionary>
+    
+    
+    

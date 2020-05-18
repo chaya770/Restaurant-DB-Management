@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2108F2EC-0272-432B-9B13-2A42D400FE65}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI_WPF</RootNamespace>
+    <AssemblyName>UI-WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="addBranch.xaml.cs">
+      <DependentUpon>addBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddCostumerWindow.xaml.cs">
+      <DependentUpon>AddCostumerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addDishWindow.xaml.cs">
+      <DependentUpon>addDishWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrderedDishWindow.xaml.cs">
+      <DependentUpon>AddOrderedDishWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllBranchesWindow.xaml.cs">
+      <DependentUpon>AllBranchesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllCostumersWindow.xaml.cs">
+      <DependentUpon>AllCostumersWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllDishesWindow.xaml.cs">
+      <DependentUpon>AllDishesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllOrderedDishesWindow.xaml.cs">
+      <DependentUpon>AllOrderedDishesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllOrderesWindow.xaml.cs">
+      <DependentUpon>AllOrderesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BillWindow.xaml.cs">
+      <DependentUpon>BillWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="caloriesWindow.xaml.cs">
+      <DependentUpon>caloriesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="deleteBranchWindow.xaml.cs">
+      <DependentUpon>deleteBranchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="deleteCostumerWindow.xaml.cs">
+      <DependentUpon>deleteCostumerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="deleteDishWindow.xaml.cs">
+      <DependentUpon>deleteDishWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="deleteOrderedDishWindow.xaml.cs">
+      <DependentUpon>deleteOrderedDishWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="deleteOrderWindow.xaml.cs">
+      <DependentUpon>deleteOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grouping OrderedDishByHechsher.xaml.cs">
+      <DependentUpon>Grouping OrderedDishByHechsher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupingorderedDishByCity.xaml.cs">
+      <DependentUpon>GroupingorderedDishByCity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GroupingorderedDishByDish.xaml.cs">
+      <DependentUpon>GroupingorderedDishByDish.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GrouporderedDishByDays.xaml.cs">
+      <DependentUpon>GrouporderedDishByDays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PriceWindow.xaml.cs">
+      <DependentUpon>PriceWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updateBranchWindow.xaml.cs">
+      <DependentUpon>updateBranchWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updateCostumerWindow.xaml.cs">
+      <DependentUpon>updateCostumerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updateDishWindow.xaml.cs">
+      <DependentUpon>updateDishWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updateOrderedDishWindow.xaml.cs">
+      <DependentUpon>updateOrderedDishWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updateOrderWindow.xaml.cs">
+      <DependentUpon>updateOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="addBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddCostumerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addDishWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddOrderedDishWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllBranchesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllCostumersWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllDishesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllOrderedDishesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllOrderesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BillWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="caloriesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="deleteBranchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="deleteCostumerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="deleteDishWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="deleteOrderedDishWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="deleteOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnglishDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grouping OrderedDishByHechsher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupingorderedDishByCity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GroupingorderedDishByDish.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GrouporderedDishByDays.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HebrewDictonary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="addOrder.xaml.cs">
+      <DependentUpon>addOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PriceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updateBranchWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updateCostumerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updateDishWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updateOrderedDishWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updateOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\BE.Branch.datasource" />
+    <None Include="Properties\DataSources\BE.Costumer.datasource" />
+    <None Include="Properties\DataSources\BE.Dish.datasource" />
+    <None Include="Properties\DataSources\BE.Order.datasource" />
+    <None Include="Properties\DataSources\BE.Ordered_Dish.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{45ec283e-8e67-4dd7-a6c2-95e12501717b}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{f2b2606a-63b7-4d96-a747-3ad44a17e760}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DS\DS.csproj">
+      <Project>{17755a3c-3ab6-4987-977c-8eeff78d081c}</Project>
+      <Name>DS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="allPictures\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="allPictures\picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="allPictures\הזמנות.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="allPictures\צלחת.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="allPictures\הזמנה מוזמנת.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="allPictures\סניפים.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="allPictures\מנה.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

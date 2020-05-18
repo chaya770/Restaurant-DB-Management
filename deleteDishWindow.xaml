@@ -1,0 +1,46 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_WPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="UI_WPF.deleteDishWindow"
+        mc:Ignorable="d"
+        Title="deleteDishWindow" Height="300" Width="300" >
+    <Window.Resources>
+
+        <Style TargetType="Label" >
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="{DynamicResource dishbackround}">
+
+        <Grid x:Name="grid1" VerticalAlignment="Top" Margin="10,65,0,0" HorizontalAlignment="Left"  Height="66" Width="274">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="105.6"/>
+                <ColumnDefinition Width="Auto" MinWidth="129.6"/>
+            </Grid.ColumnDefinitions>
+            <Label VerticalAlignment="Center" Grid.Row="0" Margin="3,10,0,22.4" HorizontalAlignment="Left" Grid.Column="0" Content="{DynamicResource DishNumberToDelete}" Height="52" Width="127"/>
+            <ComboBox x:Name="dishNumberComboBox" VerticalAlignment="Center" Grid.Row="0" Margin="0.4,10,0,22.8" ItemsSource="{Binding dishNumber}" HorizontalAlignment="Left"  Grid.Column="1" Height="52" Width="127" SelectionChanged="dishNumberComboBox_SelectionChanged"/>
+
+        </Grid>
+        <Button x:Name="button" Content="{DynamicResource Delete}" HorizontalAlignment="Left" Margin="80,183,0,0" VerticalAlignment="Top" Width="122" Height="43" Click="button_Click">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=dishNumberComboBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+
+
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+    </Grid>
+</Window>

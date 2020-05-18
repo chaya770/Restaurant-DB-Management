@@ -1,0 +1,80 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_WPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="UI_WPF.updateBranchWindow"
+        mc:Ignorable="d"
+        Title="updateBranchWindow" Height="450" Width="300" >
+    <Window.Resources>
+
+        <Style TargetType="Label" >
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="{StaticResource BranchesBackround}">
+        <Grid x:Name="grid1"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="254" Width="261">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="{DynamicResource lablebranchaddress}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120" Height="23"/>
+            <TextBox x:Name="branchAdressTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding branchAdress, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="{DynamicResource lableavailabledGuys}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center" Width="120" Height="23"/>
+            <TextBox x:Name="branchAvailableDeliveryGuysTextBox" IsKeyboardFocusedChanged="branchAvailableDeliveryGuysTextBox_IsKeyboardFocusedChanged" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding branchAvailableDeliveryGuys, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="{DynamicResource lablebranchname}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center" Width="120" Height="23"/>
+            <TextBox x:Name="branchNameTextBox" IsKeyboardFocusedChanged="branchNameTextBox_IsKeyboardFocusedChanged" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding branchName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="{DynamicResource lablebranchnumworkwrs}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center" Width="120" Height="23"/>
+            <TextBox x:Name="branchNumWorkersTextBox" IsKeyboardFocusedChanged="branchNumWorkersTextBox_IsKeyboardFocusedChanged"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding branchNumWorkers, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="{DynamicResource lablebranchphonenumber}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="23"/>
+            <TextBox x:Name="branchPhoneNumberTextBox" IsKeyboardFocusedChanged="branchPhoneNumberTextBox_IsKeyboardFocusedChanged"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="5" Text="{Binding branchPhoneNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="{DynamicResource lablebranchhechsher}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center" Width="120" Height="23"/>
+            <ComboBox x:Name="hechsherComboBox" Grid.Column="1"  HorizontalAlignment="Left" Height="Auto" SelectedItem="{Binding Hechsher, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="6" VerticalAlignment="Center" Width="120"/>
+
+            <Label Content="{DynamicResource lablebranchmanager}" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="7" VerticalAlignment="Center" Width="120" Height="23"/>
+            <TextBox x:Name="managerTextBox" IsKeyboardFocusedChanged="managerTextBox_IsKeyboardFocusedChanged"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="7" Text="{Binding Manager, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            
+            <Label Content="{DynamicResource lablebranccity}" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3.2,0,-7.6" Grid.Row="8" VerticalAlignment="Center" Width="120" Height="34"/>
+            <ComboBox x:Name="mycityComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="Auto" SelectedItem="{Binding Mycity, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Row="8" VerticalAlignment="Center" Width="120"/>
+
+        </Grid>
+        <Grid x:Name="grid2"  HorizontalAlignment="Left" Margin="44,24,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="{DynamicResource lablebranchnumber}" Grid.Column="0" HorizontalAlignment="Left" Margin="-35,0,0,5.8" Grid.Row="0" VerticalAlignment="Center" Width="120" Height="23"/>
+            <ComboBox x:Name="branchNumberComboBox"  HorizontalAlignment="Left" Height="Auto" SelectedItem="{Binding Branch,Mode=TwoWay, NotifyOnValidationError=true,ValidatesOnExceptions=true }" Margin="23.2,1,-103.2,5.8" Grid.Row="0" VerticalAlignment="Center" Width="120"  Grid.Column="1" SelectionChanged="branchNumberComboBox_SelectionChanged"/>
+
+        </Grid>
+        <Button x:Name="button" Content="{DynamicResource Update}" HorizontalAlignment="Left" Margin="80,354,0,0" VerticalAlignment="Top" Width="93" Height="42" Click="button_Click">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=branchNumberComboBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+
+
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,43 @@
+﻿<Window x:Class="UI_WPF.AllBranchesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_WPF"
+        mc:Ignorable="d"
+        Title="AllBranchesWindow" Height="300" Width="900">
+    <Grid  Background="{StaticResource BranchesBackround}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="175*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="dataGrid"  Grid.Row="4" Grid.ColumnSpan="5" Margin="0,19.8,-0.4,0.4" Grid.RowSpan="2" />
+        <Label x:Name="label" Content="{DynamicResource searchby}" Grid.Row="0" Margin="0,0,0.4,0.4"/>
+
+        <CheckBox x:Name="checkBoxBranchnumber"  Content="{DynamicResource lablebranchnumber}" Grid.Column="0" Unchecked="checkBoxBranchnumber_unChecked" Checked="checkBoxBranchnumber_Checked" Margin="0,22,0.4,0.2" Grid.RowSpan="2" />
+        <TextBox x:Name="Branchnumber"  IsEnabled="False" Text="{DynamicResource enterBranchnumber}" Grid.Column="1" Margin="102,22,0.4,0.2" Grid.RowSpan="2" SpellCheck.IsEnabled="True" MouseEnter="Branchnumber_MouseEnter" MouseLeave="Branchnumber_MouseLeave"/>
+
+        <CheckBox x:Name="checkBoxBranchName" Unchecked="checkBoxBranchName_unChecked" Content="{DynamicResource lablebranchname}"  Grid.Row="1" Grid.Column="0" Checked="checkBoxBranchName_Checked" Margin="0,16.6,0.4,0.4" Grid.RowSpan="2"  />
+        <TextBox x:Name="Branchname" IsEnabled="False" Text="{DynamicResource enterBranchname}" Grid.Row="1" Grid.Column="1" Margin="102,16.6,0.4,16.2" Grid.RowSpan="3" SpellCheck.IsEnabled="True"  MouseEnter="Branchname_MouseEnter" MouseLeave="Branchname_MouseLeave"/>
+
+        <CheckBox x:Name="checkBoxBranchcity" Unchecked="checkBoxBranchcity_unChecked" Content="{DynamicResource lablebranccity}" Grid.Row="2" Grid.Column="0" Checked="checkBoxBranchcity_Checked" Margin="0,18.8,0.4,0.2" Grid.RowSpan="2" />
+        <ComboBox x:Name="Branchcity" Grid.Row="3" IsEnabled="False"  Grid.Column="1"  />
+
+        <CheckBox x:Name="checkBoxBranchHechsher" Unchecked="checkBoxBranchHechsher_unChecked" Content="{DynamicResource lablebranchhechsher}" Grid.Row="3" Grid.Column="0" Checked="checkBoxBranchHechsher_Checked" Margin="0,16.6,0.4,0.2" Grid.RowSpan="2" />
+        <ComboBox x:Name="hechshercombobox"  IsEnabled="False" Grid.Row="4"  Grid.Column="1"  />
+        <Button x:Name="button" Content="select" Grid.Column="3" Grid.Row="1"  Grid.RowSpan="3" Click="button_Click" Foreground="#FFF6F0F0" FontSize="16"  />
+
+
+    </Grid>
+</Window>

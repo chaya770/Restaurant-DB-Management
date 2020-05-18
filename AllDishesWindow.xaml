@@ -1,0 +1,46 @@
+﻿<Window x:Class="UI_WPF.AllDishesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_WPF"
+        mc:Ignorable="d"
+        Title="AllDishesWindow" Height="400" Width="700.35">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="13*"/>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="259*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="108*"/>
+            <ColumnDefinition Width="135*"/>
+            <ColumnDefinition Width="230*"/>
+
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="allDishesDataGrid" Grid.Row="7" Margin="0,1.8,-0.2,0.4" Grid.ColumnSpan="3"/>
+        <CheckBox x:Name="checkBoxDishnumber"  Content="{DynamicResource DishNumber}" Grid.Row="0" Grid.Column="0" Margin="0,0,0,0.2" Unchecked="checkBoxDishnumber_unChecked" Checked="checkBoxDishnumber_Checked"/>
+        <ComboBox x:Name="Dishnumber" IsEnabled="False" Text="Enter dish number :" Grid.Column="1" Grid.Row="0"/>
+        <CheckBox x:Name="checkBoxDishName" Content="{DynamicResource DishName}" Grid.Column="0" Margin="0,15,0,1" Grid.RowSpan="2" Unchecked="checkBoxDishName_unChecked" Checked="checkBoxDishName_Checked"/>
+        <ComboBox x:Name="Dishname" IsEnabled="False" Text="Enter dish name :" Grid.Column="1" Grid.Row="1"/>
+        <CheckBox x:Name="checkBoxDishSize" Content="{DynamicResource DishSize}" Grid.Row="1" Grid.Column="0" Margin="0,15.8,0,0.4" Grid.RowSpan="2" Unchecked="checkBoxDishSize_unChecked" Checked="checkBoxDishSize_Checked"/>
+        <ComboBox x:Name="dishsize" Grid.Row="2" Grid.Column="1"/>
+        <CheckBox x:Name="checkBoxDishPrice" Content="{DynamicResource maxPrice}" Grid.Row="2" Grid.Column="0" Margin="0,17,0,0.4" Grid.RowSpan="2" Unchecked="checkBoxDishPrice_unChecked" Checked="checkBoxDishPrice_Checked"/>
+        <TextBox x:Name="pricetextbx" IsEnabled="False" Text="{DynamicResource enterMaxprice}" Grid.Column="1" Grid.Row="3" MouseEnter="pricetextbx_MouseEnter" MouseLeave="pricetextbx_MouseLeave" />
+        <!--TextChanged="pricetextbx_TextChanged"-->
+        <CheckBox x:Name="checkBoxDishHechsher"  Content="{DynamicResource Hechsher}" Grid.Row="4" Grid.Column="0" Margin="0,0.6,0,0" Unchecked="checkBoxDishHechsher_unChecked" Checked="checkBoxDishHechsher_Checked"/>
+        <ComboBox x:Name="hechshercombobox" Grid.Row="4" Grid.Column="1"/>
+        <CheckBox x:Name="checkBoxDishCalories"  Content="{DynamicResource DishCalories}" Grid.Row="4" Grid.Column="0" Margin="0,16.6,0,14.2" Grid.RowSpan="3" Unchecked="checkBoxDishCalories_unChecked" Checked="checkBoxDishCalories_Checked"/>
+        <TextBox x:Name="calories" IsEnabled="False" Text="{DynamicResource EntemaxCaloroies}" Grid.Column="1" Grid.Row="5" MouseEnter="calories_MouseEnter" MouseLeave="calories_MouseLeave"/>
+        <CheckBox x:Name="checkBoxDishrate" Content="{DynamicResource DishRate}" Grid.Row="6" Grid.Column="0" Margin="0,0.2,0,257.4" Grid.RowSpan="2" Unchecked="checkBoxDishrate_unChecked" Checked="checkBoxDishrate_Checked"/>
+        <TextBox x:Name="rate" IsEnabled="False" Text="{DynamicResource MInRAte}" Grid.Column="1" Grid.Row="6" MouseEnter="rate_MouseEnter" MouseLeave="rate_MouseLeave"/>
+
+        <Button x:Name="button" Content="{DynamicResource select}" Grid.Column="2" HorizontalAlignment="Left" Margin="29.8,6.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="28" Grid.RowSpan="2" Click="button_Click" Foreground="#FF605858" FontSize="16"/>
+
+    </Grid>
+</Window>

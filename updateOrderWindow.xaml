@@ -1,0 +1,72 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_WPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="UI_WPF.updateOrderWindow"
+        mc:Ignorable="d"
+        Title="updateOrderWindow" Height="300" Width="300" >
+    <Window.Resources>
+
+        <Style TargetType="Label" >
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid Background="{StaticResource backrounorder}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="170*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="131*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="113*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="grid1" VerticalAlignment="Top" Margin="10,23,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="81.6"/>
+                <ColumnDefinition Width="Auto" MinWidth="126.4"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="UOWordernumber" Content="{DynamicResource OrderToUpdate}" Grid.Row="0"   Grid.Column="0"  />
+            <ComboBox x:Name="orderNumberCombotBox"  Width="120" VerticalAlignment="Center" SelectedItem="{Binding orderNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="0" Height="23" HorizontalAlignment="Left" Grid.Column="1" SelectionChanged="orderNumberCombotBox_SelectionChanged"/>
+
+            <Label x:Name="UOWdate" Content="{DynamicResource OrderDate}"   Grid.Row="1"  Grid.Column="0"  />
+            <DatePicker x:Name="dateDatePicker" VerticalAlignment="Center" SelectedDate="{Binding date, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="0" HorizontalAlignment="Left" Grid.Column="1" Height="23" Width="120"/>
+
+            <Label  Grid.Row="2" Grid.Column="0" Content="{DynamicResource Hechsher}" />
+            <ComboBox x:Name="hechsherComboBox" Width="120" VerticalAlignment="Center" SelectedItem="{Binding Hechsher, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="0" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+
+
+
+            <Label  Grid.Row="4" Grid.Column="0" Content="{DynamicResource lablebranchnumber}" Grid.ColumnSpan="2" Margin="0,0.2,126,0.4" />
+            <ComboBox x:Name="branchNumberComboBox"  SelectedItem="{Binding branchNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4"  Grid.Column="1" Height="25" Margin="0.4,0,6,0" VerticalAlignment="Bottom"/>
+        </Grid>
+        <Button x:Name="updatebutton" Content="{DynamicResource Update}" Margin="93,64.4,103.6,0.4" Click="updatebutton_Click" Grid.Row="2" Grid.ColumnSpan="2">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=orderNumberCombotBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="label_Copy" Content="{DynamicResource costumertz}" HorizontalAlignment="Left" Height="26" Margin="11,3.8,0,0" VerticalAlignment="Top" Width="98" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2"/>
+        <ComboBox x:Name="comboBox_Copy" Grid.ColumnSpan="2"  SelectedItem="{Binding costumerTz, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Left"  Margin="123,3.8,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" />
+    </Grid>
+</Window>

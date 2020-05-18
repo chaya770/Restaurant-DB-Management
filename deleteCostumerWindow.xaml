@@ -1,0 +1,47 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_WPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="UI_WPF.deleteCostumerWindow"
+        mc:Ignorable="d"
+        Title="deleteCostumerWindow" Height="300" Width="349.42" >
+    <Window.Resources>
+
+        <Style TargetType="Label" >
+            <Setter Property="Foreground" Value="#FF5F3A3A"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="0,0,-5.8,-19.6" Background="{StaticResource costumerBackround}">
+
+        <Grid x:Name="grid1" VerticalAlignment="Top" Margin="0,59,0,0" HorizontalAlignment="Left"  Height="78" Width="344">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="144"/>
+                <ColumnDefinition Width="Auto" MinWidth="140"/>
+            </Grid.ColumnDefinitions>
+            <Label VerticalAlignment="Center" Grid.Row="0"   Grid.Column="0" Content="{DynamicResource TZofCostumerToRemove}" />
+            <ComboBox x:Name="tzComboBox"  Grid.Row="0"  SelectedItem="{Binding tz}"   Grid.Column="1" Margin="0,0,-13,0.4" SelectionChanged="tzComboBox_SelectionChanged"/>
+
+        </Grid>
+        <Button x:Name="button" Content="{DynamicResource Delete}" HorizontalAlignment="Left" Margin="127,176,0,0" VerticalAlignment="Top" Width="104" Height="34" Click="button_Click">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=tzComboBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+
+
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+    </Grid>
+</Window>

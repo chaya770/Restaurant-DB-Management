@@ -1,0 +1,114 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_WPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="UI_WPF.addBranch"
+        mc:Ignorable="d"
+        Title="addBranch" Height="400" Width="400" >
+    <Window.Resources>
+
+        <Style TargetType="Label" >
+            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource BranchesBackround}">
+
+        <Grid x:Name="grid1"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="174.4"/>
+                <ColumnDefinition Width="128.8"/>
+                <ColumnDefinition Width="281.7"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="lablebranchaddress" VerticalAlignment="Center" Grid.Row="0"  Grid.Column="0" Content="{DynamicResource lablebranchaddress}" Height="26" Margin="0,3,0.4,3" />
+            <TextBox x:Name="branchAdressTextBox"  Text="{Binding branchAdress, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Grid.ColumnSpan="2" Margin="174,0,0.2,0" Width="120"/>
+
+            <Label x:Name="lableavailabledGuys" VerticalAlignment="Center" Grid.Row="1"   Grid.Column="0" Content="{DynamicResource lableavailabledGuys}" Height="26" Margin="0,3,0.4,3" />
+            <TextBox x:Name="branchAvailableDeliveryGuysTextBox" IsKeyboardFocusedChanged="branchAvailableDeliveryGuysTextBox_IsKeyboardFocusedChanged"  Width="120" VerticalAlignment="Center" Text="{Binding branchAvailableDeliveryGuys, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="4.6,4,0,5" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+
+            <Label x:Name="lablebranchname" VerticalAlignment="Center" Grid.Row="2"  Grid.Column="0" Content="{DynamicResource lablebranchname}" Height="26" Margin="0,3,0.4,3" />
+            <TextBox x:Name="branchNameTextBox" IsKeyboardFocusedChanged="branchNameTextBox_IsKeyboardFocusedChanged"  Width="120" VerticalAlignment="Center" Text="{Binding branchName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="4.6,4,0,4" Height="24" HorizontalAlignment="Left" Grid.Column="1"/>
+
+            <Label x:Name="lablebranchnumber" VerticalAlignment="Center" Grid.Row="3"  Grid.Column="0" Content="{DynamicResource lablebranchnumber}" Height="25" Margin="0,3,0.4,3.2" />
+            <TextBox x:Name="branchNumberTextBox" IsKeyboardFocusedChanged="branchNumberTextBox_IsKeyboardFocusedChanged"  Width="120" VerticalAlignment="Center" Text="{Binding branchNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="4.6,4,0,4.2" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+
+            <Label x:Name="lablebranchnumworkwrs" VerticalAlignment="Center" Grid.Row="4"  Grid.Column="0" Content="{DynamicResource lablebranchnumworkwrs}" Height="26" Margin="0,2.8,0.4,2.4"/>
+            <TextBox x:Name="branchNumWorkersTextBox" IsKeyboardFocusedChanged="branchNumWorkersTextBox_IsKeyboardFocusedChanged" Width="120" VerticalAlignment="Center" Text="{Binding branchNumWorkers, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="4.6,4.8,0,3.4" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+
+            <Label x:Name="lablebranchphonenumber" VerticalAlignment="Center" Grid.Row="5"  Grid.Column="0" Content="{DynamicResource lablebranchphonenumber}" Height="26" Margin="0,2.6,0.4,2.6"/>
+            <TextBox x:Name="branchPhoneNumberTextBox" IsKeyboardFocusedChanged="branchPhoneNumberTextBox_IsKeyboardFocusedChanged"  Width="120" VerticalAlignment="Center" Text="{Binding branchPhoneNumber, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="5" Margin="4.6,2.6,0,5.6" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+
+            <Label x:Name="lablebranchhechsher" VerticalAlignment="Center" Grid.Row="6"  Grid.Column="0" Content="{DynamicResource lablebranchhechsher}" Height="26" Margin="0,2.4,0.4,2.8" />
+            <ComboBox x:Name="hechsherComboBox" Width="120" VerticalAlignment="Center" Grid.Row="6" Margin="4.6,3.4,0,4.8" SelectedItem="{Binding Hechsher}" Height="23" HorizontalAlignment="Left"  Grid.Column="1"/>
+
+
+            <Label x:Name="lablebranchmanager" VerticalAlignment="Center" Grid.Row="7"   Grid.Column="0" Content="{DynamicResource lablebranchmanager}" Height="25" Margin="0,3.2,0.4,3" />
+            <TextBox x:Name="managerTextBox" IsKeyboardFocusedChanged="managerTextBox_IsKeyboardFocusedChanged"  Width="120" VerticalAlignment="Center" Text="{Binding Manager, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="7" Margin="4.6,3.2,0,4" Height="24" HorizontalAlignment="Left" Grid.Column="1"/>
+
+            <Label VerticalAlignment="Center" x:Name="lablebranccity" Grid.Row="8"  Grid.Column="0" Content="{DynamicResource lablebranccity}" Height="25" Margin="0,3,0.4,3.2" />
+            <ComboBox x:Name="mycityComboBox" Width="120" VerticalAlignment="Center" Grid.Row="8" Margin="4.6,4,0,4.2" SelectedItem="{Binding Mycity}" Height="23" HorizontalAlignment="Left"  Grid.Column="1">
+               
+            </ComboBox>
+        </Grid>
+        <Button x:Name="buttonAdd" Content="{DynamicResource Add}" Height="28" Margin="54,332,47.6,0" VerticalAlignment="Top" Click="button_Click">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=branchAdressTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=branchAvailableDeliveryGuysTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+                        <DataTrigger Binding="{Binding ElementName=branchNameTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+                        <DataTrigger Binding="{Binding ElementName=branchNumberTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+                        <DataTrigger Binding="{Binding ElementName=branchNumWorkersTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+
+                        <DataTrigger Binding="{Binding ElementName=branchPhoneNumberTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+
+                        <DataTrigger Binding="{Binding ElementName=hechsherComboBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+
+                        <DataTrigger Binding="{Binding ElementName=managerTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+                        <DataTrigger Binding="{Binding ElementName=mycityComboBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="false"/>
+                        </DataTrigger>
+
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

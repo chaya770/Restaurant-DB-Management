@@ -1,0 +1,125 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+   <!--":local="clr-namespace:UI_WPF"-->
+   
+    <System:String x:Key="lablebranchaddress">Branch Address</System:String>
+    <System:String x:Key="lableavailabledGuys">Available Delivery Guys</System:String>
+    <System:String x:Key="lablebranchname">Branch Name</System:String>
+    <System:String x:Key="lablebranchnumber">Branch Number</System:String>
+    <System:String x:Key="lablebranchnumworkwrs">Num Workers</System:String>
+    <System:String x:Key="lablebranchphonenumber">Branch Phone number</System:String>
+    <System:String x:Key="lablebranchhechsher">Hechsher</System:String>
+    <System:String x:Key="lablebranchmanager">Branch manager</System:String>
+    <System:String x:Key="lablebranccity">Branch City</System:String>
+    <System:String x:Key="Add">Add</System:String>
+    <System:String x:Key="ordernumber">order number</System:String>
+
+
+
+
+
+    <System:String x:Key="AddCostumerButton">Add Costumer</System:String>
+    <System:String x:Key="updateCostumerMainWindow">Update Costumer</System:String>
+    <System:String x:Key="deleteCostumerMainWindow">DeleteCostumer</System:String>
+    <System:String x:Key="allCostumerMainWindow">All Costumers</System:String>
+    <System:String x:Key="AddBranchMainWindow">AddBranch</System:String>
+    <System:String x:Key="updateBranchMainWindow">Update Branch</System:String>
+    <System:String x:Key="deleteBranchMainWindow">DeleteBranch</System:String>
+    <System:String x:Key="AllBranchMainWindow">All Branches</System:String>
+    <System:String x:Key="addOrderMainWindow">AddOrder</System:String>
+    <System:String x:Key="updateOrderMainWindow">UpdateOrder</System:String>
+    <System:String x:Key="deleteOrderMainWindow">DeleteOrder</System:String>
+    <System:String x:Key="allOrdersMainWindow">All Orders</System:String>
+    <System:String x:Key="AddDishMainWindow">AddDish</System:String>
+    <System:String x:Key="UpdateDishMainWindow">UpdateDish</System:String>
+    <System:String x:Key="deleteDishMainWindow">DeleteDish</System:String>
+    <System:String x:Key="allDishMainWindow">All Dishes</System:String>
+    <System:String x:Key="AddOrderedDishMainWindow">AddOrderedDish</System:String>
+    <System:String x:Key="updateOrderedDishMainWindow">SetOrderedDish</System:String>
+    <System:String x:Key="deleteOrderedDishMainWindow">DeleteOrderedDish</System:String>
+    <System:String x:Key="AllOrderedDishMainWindow">All Ordered Dishes</System:String>
+    
+    <System:String x:Key="caloriesMainWindow" >calories </System:String>
+    <System:String x:Key="billMainWindow">BILL</System:String>
+    <System:String x:Key="priceoforderMainWindow">price of Order</System:String>
+    
+    <System:String x:Key="groupOrderByKindOfDish">Orders by Kind of Dish</System:String>
+    <System:String x:Key="groupByKindOfCity">Order by City</System:String>
+    <System:String x:Key="groupByDaysOfWeek">Orders by days of week</System:String>
+    <System:String x:Key="groupByHechsher">Dishes by Hechsher</System:String>
+    <System:String x:Key="Update">UPDATE</System:String>
+    <System:String x:Key="Delete">Delete</System:String>
+    
+    <System:String x:Key="CostumerName">Costumer Name</System:String>
+    <System:String x:Key="costumertz">Costumer tz:</System:String>
+    <System:String x:Key="costumerAge">costumer Age:</System:String>
+    <System:String x:Key="costumerAddress">costumer Adress:</System:String>
+    <System:String x:Key="costumerAddressnow">costumer Adress Now:</System:String>
+    <System:String x:Key="costumerMembership">membership:</System:String>
+    <System:String x:Key="CreditCard">Credit Card:</System:String>
+    <System:String x:Key="tzToUpdate">tz to update:</System:String>
+    <System:String x:Key="TZofCostumerToRemove">TZ OF COSTUMER TO REMOVE:</System:String>
+    
+    
+    <System:String x:Key="DishCalories">Calories:</System:String>
+    <System:String x:Key="DishName">dish Name:</System:String>
+    <System:String x:Key="DishNumber">dish Number:</System:String>
+    <System:String x:Key="DishPrice">dish Price:</System:String>
+    <System:String x:Key="DishSize">dish Size:</System:String>
+    <System:String x:Key="Hechsher">Hechsher:</System:String>
+    <System:String x:Key="DishRate">Rate:</System:String>
+    <System:String x:Key="DishNumberToDelete">DISH TO DELETE:</System:String>
+    <System:String x:Key="OrderHechsher">Order Hechsher:</System:String>
+    <System:String x:Key="OrderDate">Order Date:</System:String>
+    <System:String x:Key="OrderToUpdate">ORDER TO UPDATE:</System:String>
+    <System:String x:Key="Ordernumber">order Number:</System:String>
+    <System:String x:Key="dishAmount">amount Of Dish:</System:String>
+    
+    
+    <System:String x:Key="bill">BILL:</System:String>
+    <System:String x:Key="payment">Payment:</System:String>
+    <System:String x:Key="notincludingTip">TIP NOT INCLUDED:)</System:String>
+    <System:String x:Key="totalCalories">total calories:</System:String>
+    <System:String x:Key="avgCaloriesPerPerson">average calories per person:</System:String>
+    <System:String x:Key="tip">Tip</System:String>
+    
+    
+    <System:String x:Key="PriceOfOrder">price of order:</System:String>
+    <System:String x:Key="OrdersByDayaOfWEEk">Ordered Dishes days of week</System:String>
+    <System:String x:Key="OrdrersByDish">Ordered Dish By Dish</System:String>
+    <System:String x:Key="OrdersByCity">Ordered Dishes By City</System:String>
+    <System:String x:Key="OrdersByHechsher">Orderes By Hechsher</System:String>
+    <System:String x:Key="HomePage">HOME PAGE</System:String>
+    <System:String x:Key="Costumer">COSTUMER</System:String>
+    <System:String x:Key="Branch">BRANCH</System:String>
+    <System:String x:Key="Order">ORDER</System:String>
+    <System:String x:Key="Dish">DISH</System:String>
+    <System:String x:Key="OrderedDish">ORDERED DISH</System:String>
+    <System:String x:Key="others" xml:space="preserve">OTHERS  </System:String>
+    <System:String x:Key="TotalPrice">Total Price</System:String>
+    
+    <System:String x:Key="SELECTBYordernumber">select by order number</System:String>
+    <System:String x:Key="SELECTBYbranchnumber">select by Branch number</System:String>
+    <System:String x:Key="SELECTBYorderhechsher">select by order hechsher</System:String>
+    <System:String x:Key="SELECTbyorderdate">select by order date</System:String>
+    <System:String x:Key="select">select</System:String>
+    <System:String x:Key="searchby">Search By:</System:String>
+    <System:String x:Key="enterAmountOfDish">enter amoutof dish:</System:String>
+    <System:String x:Key="enterBranchnumber">Enter Branch number :</System:String>
+    <System:String x:Key="enterBranchname">Enter Branch name :</System:String>
+    <System:String x:Key="selctCosname">select costumer name:</System:String>
+    <System:String x:Key="selsectcosTZ">select costumer id:</System:String>
+    <System:String x:Key="maxPrice">MaxPrice</System:String>
+    <System:String x:Key="enterMaxprice">Enter max price :</System:String>
+    <System:String x:Key="EntemaxCaloroies">Enter max calories :</System:String>
+    <System:String x:Key="MInRAte">Enter min rate :</System:String>
+    <System:String x:Key="groups">GROUPS</System:String>
+
+
+
+
+
+
+
+</ResourceDictionary>
